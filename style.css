@@ -1,6 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  --red: #8B0000;
+  --lightred: #dcb2b2;
+  --darkblue: #324158;
+  --lightblue: #b6c4ce;
+  --grey: #605E5E;
+  --blue: rgb(12, 59, 93);
+  --font1: 'neuzeit-grotesk-extra-conden', sans-serif;
+  --font2: 'Nunito', sans-serif;
+
+
 }
 body {
   background-color: #f3f3f3;
@@ -15,7 +25,7 @@ body {
 }
 
 header {
-  background-color: red;
+  background-color: var(--red);
   grid-row: 1 / 2;
   height: 100%;
   width: 100%;
@@ -33,7 +43,7 @@ header {
   width: 100%;
   position: absolute;
   transform: translate(-100%, 0%);
-  transition: all ease-in-out 5000ms;
+  transition: all ease-in-out 500ms;
 }
 
 .active {
@@ -44,6 +54,28 @@ header {
   transform: translate(100%,0);
 }
 
+/********* SVG STYLING **********/
+svg .cls-1 {fill:#fefefe;}
+svg .cls-2 {fill: var(--blue);}
+svg .cls-3 {fill: var(--lightblue);}
+svg .cls-4 {
+  font-size:96.49px;
+  font-family: var(--font1);
+
+  }
+svg .cls-5 {letter-spacing:-0.01em;}
+svg .cls-6 {letter-spacing:0em;}
+svg .cls-7 {
+  font-size:59.14px;
+  font-family: var(--font2);
+}
+svg .cls-8 {letter-spacing:0.02em;}
+svg .cls-9 {letter-spacing:0em;}
+svg .cls-10 {letter-spacing:-0.01em;}
+svg .cls-11 {letter-spacing:0em;}
+svg .cls-12 {letter-spacing:0em;}
+
+/*** SLIDE STYLING ***/
 .s1 {
 background: red;
 }
@@ -53,6 +85,8 @@ background-color: green;
 .s3 {
 background-color: blue;
 }
+
+
 .votebutton {
   font-size: 3em;
   background-color: gray;
@@ -60,8 +94,12 @@ background-color: blue;
   border: 0 none;
   border-radius: 10px;
 }
+
+
+
+
 footer {
-  background-color: red;
+  background-color: var(--red);
   height: 100%;
   width: 100%;
   grid-row: 4 / 5;
