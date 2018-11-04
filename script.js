@@ -60,36 +60,16 @@ for (var i = 0; i < slides.length; i++) {
  }
 
 
+
 });
-}
- /*slide1.addEventListener("click",function butChange() {
-  if (myButton.innerHTML != 'Vote for Organization 1' | document.querySelector(".cls-2").style.fill = "var(--blue)") {
-    myButton.innerHTML = 'Vote for Organization 1';
-    document.querySelector(".cls-2").style.fill = "var(--grey)";
-    document.querySelector("svg text").style.fill = "var(--grey)";
-  }
-  else {
-    myButton.innerHTML = 'Select an organization';
-    document.querySelector(".cls-2").style.fill = "var(--blue)";
-    document.querySelector("svg text").style.fill = "black";
-  }
 
-}, false);
+document.querySelector(".vote button").addEventListener("click", function thanks() {
+  if (document.querySelector(".vote button").classList.contains("votebuttonselect") == true) {
+    document.querySelector(".thank").classList.add("thankyou")
+    document.querySelector(".thank").classList.remove("thank");
+  } else {
+    document.querySelector(".thank").style.display = "none";
+  }
+});
 
-slide2.addEventListener("click", function butChange() {
-  if (myButton.innerHTML != 'Vote for Organization 2') {
-    myButton.innerHTML = 'Vote for Organization 2';
-  }
-  else {
-    myButton.innerHTML = 'Select an organization';
-  }
-}, false);
-
-slide3.addEventListener("click", function butChange() {
-  if (myButton.innerHTML != 'Vote for Organization 3') {
-    myButton.innerHTML = 'Vote for Organization 3';
-  }
-  else {
-    myButton.innerHTML = 'Select an organization';
-  }
-}, false); */
+};
