@@ -19,7 +19,7 @@ body {
   max-width: 2208px;
   min-width: 320px;
   display: grid;
-  grid-template-rows: 1fr 7fr 2fr 1fr;
+  grid-template-rows: 1.2fr 6fr 2fr 1.2fr;
   align-items: center;
   justify-items: center;
 }
@@ -54,6 +54,9 @@ header {
   transform: translate(100%,0);
 }
 
+
+
+
 /********* SVG STYLING **********/
 svg .cls-1 {fill:#fefefe;}
 svg .cls-2 {fill: var(--blue);}
@@ -75,26 +78,45 @@ svg .cls-10 {letter-spacing:-0.01em;}
 svg .cls-11 {letter-spacing:0em;}
 svg .cls-12 {letter-spacing:0em;}
 
-/*** SLIDE STYLING ***/
-.s1 {
-background: red;
-}
-.s2 {
-background-color: green;
-}
-.s3 {
-background-color: blue;
+.textcolor {
+  fill: var(--grey);
 }
 
+/*** SLIDE STYLING ***/
+.vote {
+display: flex;
+flex-direction: column;
+}
+.vote p {
+  display: none;
+  font-family: var(--font2);
+  font-size: 2.2em;
+  padding: 10px;
+  text-align: center;
+
+}
 
 .votebutton {
   font-size: 3em;
-  background-color: gray;
-  padding: 10px 30px;
-  border: 0 none;
+  font-family: var(--font2);
+  background-color: white;
+  color: var(--blue);
+  padding: 30px 60px;
+  border: 5px solid var(--blue);
   border-radius: 10px;
 }
 
+.votebuttonselect {
+  font-size: 3em;
+  font-family: var(--font2);
+  background-color: var(--blue);
+  color: white;
+  padding: 30px 60px;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
 
 
 
