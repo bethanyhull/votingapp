@@ -5,38 +5,60 @@
   --lightred: #dcb2b2;
   --darkblue: #324158;
   --lightblue: #b6c4ce;
+--lighterblue:rgba(12, 59, 93, .15);
   --grey: #605E5E;
+--lightgrey:#dfdede;
   --blue: rgb(12, 59, 93);
   --font1: 'neuzeit-grotesk-extra-conden', sans-serif;
   --font2: 'Nunito', sans-serif;
 
 
 }
+
+html{
+height: 100vh;
+}
+
 body {
-  background-color: #f3f3f3;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   max-width: 2208px;
   min-width: 320px;
   display: grid;
-  grid-template-rows: 1.2fr 6fr 2fr 1.2fr;
+  grid-template-rows: 1.5fr 6fr 2fr 1.2fr;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+"header header header"
+"backarrow main frontarrow"
+". button ."
+"footer footer footer";
   align-items: center;
   justify-items: center;
 }
 
 header {
-  background-color: var(--red);
-  grid-row: 1 / 2;
+  background-color: var(--lighterblue);
+  grid-area: header;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
+
+header img {
+width: 500px;
+height: auto;
+
+}
+
 .slider {
-  margin: 200px;
-  width: 800px;
-  height: 800px;
+  margin: 100px;
+  width: 1000px;
+  height: 1000px;
   overflow: hidden;
   position: relative;
-  grid-row: 2 / 3;
+  grid-area: main;
 }
 .slide {
   height: 100%;
@@ -59,17 +81,18 @@ header {
 
 /********* SVG STYLING **********/
 svg .cls-1 {fill:#fefefe;}
-svg .cls-2 {fill: var(--blue);}
+svg .cls-2 {fill: var(--blue); transition: 500ms}
 svg .cls-3 {fill: var(--lightblue);}
 svg .cls-4 {
   font-size:96.49px;
   font-family: var(--font1);
+text-transform: uppercase;
 
   }
 svg .cls-5 {letter-spacing:-0.01em;}
 svg .cls-6 {letter-spacing:0em;}
 svg .cls-7 {
-  font-size:59.14px;
+  font-size:50px;
   font-family: var(--font2);
 }
 svg .cls-8 {letter-spacing:0.02em;}
@@ -78,14 +101,21 @@ svg .cls-10 {letter-spacing:-0.01em;}
 svg .cls-11 {letter-spacing:0em;}
 svg .cls-12 {letter-spacing:0em;}
 
-.textcolor {
-  fill: var(--grey);
+/*** STYLING FOR SELECTED ***/
+
+.selected svg .cls-2 {
+ fill: var(--lightgrey)
 }
 
+.selected svg .cls-7, .selected svg .cls-4 {
+  fill: var(--grey) !important;
+}
 /*** SLIDE STYLING ***/
 .vote {
+grid-area: button;
 display: flex;
 flex-direction: column;
+align-self: start;
 }
 .vote p {
   display: none;
@@ -121,9 +151,24 @@ flex-direction: column;
 
 
 footer {
-  background-color: var(--red);
+  background-color: var(--lighterblue);
   height: 100%;
   width: 100%;
-  grid-row: 4 / 5;
+  grid-area: footer;
 }
+
+.thank {
+display: none;
+position:fixed;
+width: 100%;
+height: 100%;
+background-color: var(--blue);
+z-index: 999;
+}
+
+.thank p {
+color: white;
+font-size:5em;
+font-family: var(--font2);
+
 }
