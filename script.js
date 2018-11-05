@@ -65,10 +65,11 @@ for (var i = 0; i < slides.length; i++) {
 
 document.querySelector(".vote button").addEventListener("click", function thanks() {
   if (document.querySelector(".vote button").classList.contains("votebuttonselect") == true) {
-    document.querySelector(".thank").classList.add("thankyou")
-    document.querySelector(".thank").classList.remove("thank");
+    document.querySelector(".thank").style.zIndex = "999";
+    /*document.querySelector(".thank").classList.add("thankyou")
+    document.querySelector(".thank").classList.remove("thank");*/
   } else {
-    document.querySelector(".thank").style.display = "none";
+    document.querySelector(".thank").style.zIndex = "1";
   }
 });
 

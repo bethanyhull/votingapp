@@ -16,10 +16,11 @@
 }
 
 html{
-height: 100vh;
+width: 100%;
+height: 100%;
 }
 
-body {
+.page1 {
   width: 100%;
   min-height: 100vh;
   max-width: 2208px;
@@ -34,6 +35,10 @@ body {
 "footer footer footer";
   align-items: center;
   justify-items: center;
+background-color: white;
+  position: absolute;
+  z-index: 2
+
 }
 
 header {
@@ -156,12 +161,13 @@ footer {
   grid-area: footer;
 }
 
-.thank {
+/*.thank {
 display: none;
 transition: display 800ms;
-}
+z-index: 1;
+}*/
 
-.thankyou {
+.thank {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -170,11 +176,11 @@ position: absolute;
 width: 100%;
 height: 100%;
 background-color: var(--blue);
-z-index: 999;
-transition: display 800ms;
+z-index: -1;
+transition: z-index 800ms;
 }
 
-.thankyou p {
+.thank p {
 color: white;
 font-size:5em;
 font-family: var(--font2);
