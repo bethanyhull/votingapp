@@ -22,12 +22,12 @@ height: 100%;
 
 .page1 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   max-width: 2208px;
   min-width: 320px;
   display: grid;
-  grid-template-rows: 1.5fr 6fr 2fr 1.2fr;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1.5fr auto 100px 1.2fr;
+  grid-template-columns: 35px auto 35px;
   grid-template-areas:
 "header header header"
 "backarrow main frontarrow"
@@ -52,15 +52,15 @@ header {
 }
 
 header img {
-width: 500px;
+width: 150px;
 height: auto;
 
 }
 
 .slider {
-  margin: 100px;
-  width: 1000px;
-  height: 1000px;
+  margin: 40px;
+  width: 100%;
+  height: 80vw;
   overflow: hidden;
   position: relative;
   grid-area: main;
@@ -125,28 +125,28 @@ align-self: start;
 .vote p {
   display: none;
   font-family: var(--font2);
-  font-size: 2.2em;
-  padding: 10px;
+  font-size: .8em;
+  padding: 5px;
   text-align: center;
 
 }
 
 .votebutton {
-  font-size: 3em;
+  font-size: 1.1em;
   font-family: var(--font2);
   background-color: white;
   color: var(--blue);
-  padding: 30px 60px;
+  padding: 10px 20px;
   border: 5px solid var(--blue);
   border-radius: 10px;
 }
 
 .votebuttonselect {
-  font-size: 3em;
+  font-size: 1.1em;
   font-family: var(--font2);
   background-color: var(--blue);
   color: white;
-  padding: 30px 60px;
+  padding: 10px 20px;
   border: 5px solid var(--blue);
   border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -175,16 +175,16 @@ justify-content: center;
 position: absolute;
 width: 100%;
 height: 100%;
-background-color: var(--blue);
+background-color: rgba(12, 59, 93, 0);
 z-index: -1;
+transition: background-color 1000ms;
 transition: z-index 800ms;
 }
 
 .thank p {
-color: white;
-font-size:5em;
+color: rgba(255, 255, 255, 0);
+font-size:2em;
 font-family: var(--font2);
-transition: 500ms;
-
+transition: color 1200ms;
 
 }
