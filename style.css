@@ -61,15 +61,18 @@ height: auto;
 
 .arrowed {
 	position: relative;
-	height: 200px; width: 200px;
+   display: flex;
+	height: 100%; width: 100%;
 	margin: 0 20px 20px 0;
 	border: 1px solid rgba(0,0,0,0.25);
+   align-items: center;
+   justify-content: center;
 }
 .arrow-1, .arrow-2 {
 	height: 10px; width: 10px;
 	border: 1px solid var(--blue);
 	border-width: 1px 1px 0 0;
-	transform: rotate(45deg);
+	
 }
 
 .arrow-1:after, .arrow-2:after {
@@ -83,15 +86,17 @@ height: auto;
 	   rotates transform axis */
 	/* Add width of border to Y */
 	transform: translate(5px, -6px);
-	
+}
 	/* rotate handled by parent */
   
   .arrow-1 {
     grid-area: arrow1;
+     transform: rotate(225deg);
 }
   
    .arrow-2 {
     grid-area: arrow2;
+      transform: rotate(45deg);
 } 
 
 
@@ -109,9 +114,10 @@ height: auto;
   height: 100%;
   width: 100%;
   position: absolute;
-  transform: translate(-100%, 0%);
   transition: all ease-in-out 500ms;
+  transform: translate(-100%, 0%);
 }
+
 
 .active {
   transform: translate(0,0);
