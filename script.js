@@ -3,9 +3,18 @@
 var slides = $('.slide');
 
 slides.first().before(slides.last());
-setInterval(show,4000);
+setInterval(show,6000);
 
 function show(){
+  slides = $('.slide');
+  var activeSlide = $('.active');
+
+  slides.last().after(slides.first());
+
+  activeSlide.removeClass('active').next('.slide').addClass('active');
+}
+
+function showLeft(){
   slides = $('.slide');
   var activeSlide = $('.active');
 
