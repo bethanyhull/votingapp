@@ -1,18 +1,10 @@
 
 
 var slides = $('.slide');
+slides.first().before(slides.last())
+;
+setInterval(showLeft,6000);
 
-slides.first().before(slides.last());
-setInterval(show,6000);
-
-function show(){
-  slides = $('.slide');
-  var activeSlide = $('.active');
-
-  slides.last().after(slides.first());
-
-  activeSlide.removeClass('active').next('.slide').addClass('active');
-}
 
 function showLeft(){
   slides = $('.slide');
@@ -21,6 +13,18 @@ function showLeft(){
   slides.last().after(slides.first());
 
   activeSlide.removeClass('active').next('.slide').addClass('active');
+}
+
+function showRight(){
+  slides = $('.slide');
+  var activeSlide = $('.active');
+$(".slide").css("transform", "(100%, 0)");
+   $(".active").css("transform", "(0, 0)");
+   $(".active ~.slide").css("transform", "(-100%, 0)");
+   
+  slides.first().before(slides.last());
+
+  activeSlide.removeClass('active').prev('.slide').addClass('active');
 }
 
 
