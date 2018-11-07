@@ -24,7 +24,7 @@ html {
    max-width: 2208px;
    min-width: 320px;
    display: grid;
-   grid-template-rows: 10vh 60vh 25vh 5vh;
+   grid-template-rows: 15vh 60vh 20vh 5vh;
    grid-template-columns: 35px auto 35px;
    grid-template-areas:
       "header header header"
@@ -49,8 +49,8 @@ header {
 }
 
 header img {
-   width: 150px;
-   height: auto;
+   width: auto;
+   height: 12vh;
 }
 
 /*********** Arrow Styling *************/
@@ -247,4 +247,3 @@ z-index: 1;
    font-family: var(--font2);
    transition: color 1200ms;
 }
-
