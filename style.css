@@ -265,11 +265,15 @@ z-index: 1;
     display: none;
   }
   .rotate {
-    display: block;
-
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
   }
   .rotate img {
-    width: 100vw;
+    width: 30vw;
     height auto;
   }
 }
