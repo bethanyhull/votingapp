@@ -2,12 +2,7 @@
   font-family: 'AvenirLTStd-Light';
   src: url('../votingapp1/AvenirLTStd-Light.woff') format('woff');
 }
-@media only screen and (orientation:landscape){
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
-  }
-}
+
 * {
    margin: 0;
    padding: 0;
@@ -272,10 +267,9 @@ z-index: 1;
   .rotate {
     display: block;
 
-    transform: rotate(270deg);
   }
   .rotate img {
-    width: : 100%;
+    width: 100vw;
     height auto;
   }
 }
