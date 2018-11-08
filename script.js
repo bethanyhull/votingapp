@@ -1,5 +1,6 @@
 
 
+
 var slides = $('.slide');
 slides.first().before(slides.last())
 ;
