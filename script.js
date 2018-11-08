@@ -3,7 +3,8 @@
 var slides = $('.slide');
 slides.first().before(slides.last())
 ;
-setInterval(showLeft,6000);
+/*setInterval(showLeft,6000);*/
+
 
 
 function showLeft(){
@@ -21,12 +22,56 @@ function showRight(){
 $(".slide").css("transform", "(100%, 0)");
    $(".active").css("transform", "(0, 0)");
    $(".active ~.slide").css("transform", "(-100%, 0)");
-   
+
   slides.first().before(slides.last());
 
   activeSlide.removeClass('active').prev('.slide').addClass('active');
-}
+};
 
+/*** Swipingcode ***/
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.getElementById('slider');
+
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false);
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+      slides = $('.slide');
+      var activeSlide = $('.active');
+
+      slides.last().after(slides.first());
+
+      activeSlide.removeClass('active').next('.slide').addClass('active');
+    }
+
+    if (touchendX > touchstartX) {
+      slides = $('.slide');
+      var activeSlide = $('.active');
+    $(".slide").css("transform", "(100%, 0)");
+       $(".active").css("transform", "(0, 0)");
+       $(".active ~.slide").css("transform", "(-100%, 0)");
+
+      slides.first().before(slides.last());
+
+      activeSlide.removeClass('active').prev('.slide').addClass('active');
+    }
+
+};
+
+/*****Slide style ****/
 
 var slides = document.querySelectorAll(".slide");
 
