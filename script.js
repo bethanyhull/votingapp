@@ -123,7 +123,7 @@ for (var i = 0; i < slides.length; i++) {
 
 document.querySelector(".vote button").addEventListener("click", function thanks() {
   if (document.querySelector(".vote button").classList.contains("votebuttonselect") == true) {
-    document.querySelector(".thank").style.zIndex = "999";
+    document.querySelector(".page1").style.display = "none";
     document.querySelector(".thank").style.backgroundColor = "rgba(12, 59, 93, 1)";
     document.querySelector(".thank p").style.color = "rgba(255, 255, 255, 1)";
 
